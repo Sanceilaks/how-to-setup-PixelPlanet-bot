@@ -1,4 +1,4 @@
-# Руководство по установки афк бота
+# Руководство по установке афк бота
 1) Скачиваем https://github.com/Topinambur223606/PixelPlanetTools/releases/download/v6.3.3/PixelPlanetBot.exe в отдельную папку
 2) Перемещаем в эту папку нужный нам арт (для примера можно взять ![green](https://user-images.githubusercontent.com/39582793/211307489-0f020c94-dc15-4308-8c30-bac0644a2611.png)
 )
