@@ -30,14 +30,14 @@ $bot_file = "./bot.exe"
 $target_file = "./target.json"
 
 function StartBot {
-	$target = Get-Content -Path $target | ConvertFrom-Json
+	$target = Get-Content -Path $target_file | ConvertFrom-Json
 
-	& $bot_file run -x $target["x"] -y $target["y"] -i $target["image"] --placingOrder $target["placingOrder"]
+	& $bot_file run -x $target.x -y $target.y -i $target.image --placingOrder $target.placingOrder
 }
 
 function UpdateTargets {
 	$url = "https://github.com/Sanceilaks/how-to-setup-PixelPlanet-bot/raw/main/target.json"
-	DownloadFile $url $target_file
+	Invoke-WebRequest -Uri $url -OutFile $target_file
 }
 
 function InstallBot {
@@ -48,10 +48,12 @@ function InstallBot {
 if ([System.IO.File]::Exists($bot_file)) {
 	UpdateTargets
 	StartBot
+	Pause
 	exit
 }
 
 InstallBot
 UpdateTargets
 StartBot
+Pause
 exit
