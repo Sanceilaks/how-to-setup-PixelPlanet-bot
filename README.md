@@ -1,6 +1,4 @@
 # Руководство по установке афк бота
-1) Скачиваем https://github.com/Topinambur223606/PixelPlanetTools/releases/download/v6.3.3/PixelPlanetBot.exe в отдельную папку
-2) Перемещаем в эту папку нужный нам арт (для примера можно взять ![green](https://user-images.githubusercontent.com/39582793/211307489-0f020c94-dc15-4308-8c30-bac0644a2611.png)
-)
-3) В строке текущего пути в проводнике пишем cmd ![image](https://user-images.githubusercontent.com/39582793/211307190-9165536f-49f1-4b96-8861-55befdb183a6.png)
-4) Вводим `PixelPlanetBot.exe run -i ИМЯ_ФАЙЛА_АРТА -x КООРДИНАТА_ПО_ИКСУ -y КООРДИНАТА_ПО_ИГРИКУ —placingOrder Left` после чего жмём энтр и смотрим на магию
+1) Скачиваем https://raw.githubusercontent.com/Sanceilaks/how-to-setup-PixelPlanet-bot/main/rupixelbot.ps1 в отдельную папку
+2) ПКМ по rupixelbot.ps1 -> Выполнить с помощью PowerShell
+![image](https://user-images.githubusercontent.com/39582793/211650237-8a4ab7ab-91fc-4bad-bab8-0022d1ed9eab.png)
