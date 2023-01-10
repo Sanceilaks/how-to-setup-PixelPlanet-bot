@@ -1,5 +1,6 @@
 {
 	"x": 5000,
 	"y": 4000,
-	"image": "test.png"
+	"image": "test.png",
+	"placingOrder": "Left"
 }

@@ -26,22 +26,26 @@ function DownloadFile($url, $targetFile) {
 	$responseStream.Dispose()
 }
 
-$file = "./bot.exe"
+$bot_file = "./bot.exe"
+$target_file = "./target.json"
 
 function StartBot {
-	
+	$target = Get-Content -Path $target | ConvertFrom-Json
+
+	& $bot_file run -x $target["x"] -y $target["y"] -i $target["image"] --placingOrder $target["placingOrder"]
 }
 
 function UpdateTargets {
-
+	$url = "https://github.com/Sanceilaks/how-to-setup-PixelPlanet-bot/raw/main/target.json"
+	DownloadFile $url $target_file
 }
 
 function InstallBot {
 	$url = "https://github.com/Topinambur223606/PixelPlanetTools/releases/download/v6.3.3/PixelPlanetBot.exe"
-	DownloadFile $url $file
+	DownloadFile $url $bot_file
 }
 
-if ([System.IO.File]::Exists($file)) {
+if ([System.IO.File]::Exists($bot_file)) {
 	UpdateTargets
 	StartBot
 	exit
